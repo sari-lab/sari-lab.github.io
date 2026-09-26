@@ -1,0 +1,815 @@
+/* ===============================
+   GLOBAL
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1b1b1b;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.main-header,
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.nav-container {
+  height: 90px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #151515;
+  text-decoration: none;
+
+  letter-spacing: -1px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  color: #000;
+}
+
+nav a.active {
+  font-weight: 700;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.home-hero {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-image: url("../images/homepage/hero.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+
+  padding: 40px;
+
+  color: white;
+}
+
+.hero-lab-name {
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  line-height: 1.12;
+
+  margin-bottom: 25px;
+}
+
+.hero-subtitle {
+  font-size: 21px;
+
+  max-width: 800px;
+  margin: 0 auto 35px;
+}
+
+.hero-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border: 1px solid white;
+
+  color: white;
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.hero-button:hover {
+  background: white;
+  color: black;
+}
+
+
+/* ===============================
+   HOME INTRO
+================================ */
+
+.home-intro {
+  padding: 110px 0 70px;
+
+  max-width: 900px;
+
+  text-align: center;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #777;
+}
+
+.home-intro h2 {
+  font-size: 43px;
+
+  line-height: 1.25;
+
+  margin-top: 20px;
+}
+
+
+/* ===============================
+   RESEARCH PILLARS
+================================ */
+
+.research-pillars {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 60px;
+
+  padding-bottom: 120px;
+}
+
+.pillar {
+  border-top: 2px solid #111;
+
+  padding-top: 25px;
+}
+
+.pillar-number {
+  font-size: 14px;
+
+  color: #888;
+
+  margin-bottom: 35px;
+}
+
+.pillar h3 {
+  font-size: 24px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+}
+
+.pillar p {
+  font-size: 17px;
+
+  color: #555;
+}
+
+
+/* ===============================
+   AFFILIATION
+================================ */
+
+.affiliation-section {
+  background: #f1f1f1;
+  padding: 100px 0;
+}
+
+.affiliation-section .section-label {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.affiliation-section h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.affiliation-section p {
+  font-size: 18px;
+}
+
+/* ===============================
+   GENERAL PAGE HEADER
+================================ */
+
+.page-header {
+  background: #f1f1f1;
+
+  padding: 90px 0;
+}
+
+.page-header h1 {
+  font-size: 55px;
+
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 20px;
+
+  max-width: 750px;
+}
+
+
+/* ===============================
+   PEOPLE
+================================ */
+
+.people-section {
+  padding: 90px 0;
+}
+
+.people-section > h2 {
+  font-size: 34px;
+
+  margin-bottom: 35px;
+}
+
+.people-section > h2:not(:first-child) {
+  margin-top: 90px;
+}
+
+.people-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+.person-card {
+  background: #f5f5f5;
+}
+
+.person-image {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+.placeholder-image {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #dedede;
+
+  color: #777;
+}
+
+.person-info {
+  padding: 25px;
+}
+
+.person-info h3 {
+  font-size: 23px;
+
+  margin-bottom: 3px;
+}
+
+.person-role {
+  color: #666;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+   RESEARCH PAGE
+================================ */
+
+.research-page {
+  padding: 100px 0;
+}
+
+.research-topic {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+
+  margin-bottom: 120px;
+}
+
+.research-topic.reverse .research-topic-image {
+  order: 2;
+}
+
+.research-topic.reverse .research-topic-content {
+  order: 1;
+}
+
+.research-topic-image {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+}
+
+.research-topic-content h2 {
+  font-size: 38px;
+
+  margin-bottom: 20px;
+}
+
+.research-topic-content p {
+  color: #555;
+
+  font-size: 18px;
+
+  margin-bottom: 15px;
+}
+
+.research-topic-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* ===============================
+   PUBLICATIONS
+================================ */
+
+.publications-page {
+  padding: 90px 0;
+
+  max-width: 1000px;
+}
+
+.publication-year {
+  margin-bottom: 80px;
+}
+
+.publication-year > h2 {
+  font-size: 36px;
+
+  border-bottom: 2px solid #222;
+
+  padding-bottom: 10px;
+}
+
+.publication {
+  padding: 30px 0;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.publication h3 {
+  font-size: 21px;
+
+  margin-bottom: 7px;
+}
+
+.publication-authors {
+  color: #444;
+}
+
+.publication-journal {
+  color: #666;
+
+  font-style: italic;
+
+  margin-bottom: 12px;
+}
+
+.publication-links {
+  display: flex;
+
+  gap: 20px;
+}
+
+.publication-links a {
+  color: #222;
+
+  font-weight: 600;
+}
+
+.publication-category {
+  margin-bottom: 70px;
+}
+
+.publication-category > h2 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.publication h3 a {
+  color: #0073b1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.publication h3 a:hover {
+  color: #004f7a;
+}
+
+.publication-authors strong {
+  font-weight: 700;
+}
+/* ===============================
+   NEWS
+================================ */
+
+.news-page {
+  padding: 90px 0;
+
+  max-width: 1000px;
+}
+
+.news-item {
+  padding: 35px 0;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.news-date {
+  color: #888;
+
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+.news-item h2 {
+  font-size: 27px;
+
+  margin-bottom: 10px;
+}
+/* ===============================
+   CONTACT
+================================ */
+
+.contact-section {
+  background: #fff;
+  padding: 60px 0 70px;
+}
+
+.contact-details {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-details p {
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.contact-details a {
+  color: #222;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+  background: #171717;
+
+  color: #ddd;
+
+  padding: 55px 0;
+}
+
+.footer-content {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .nav-container {
+    height: auto;
+
+    padding: 20px 0;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px 22px;
+  }
+
+  .home-hero {
+    min-height: 540px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+
+  .home-intro h2 {
+    font-size: 32px;
+  }
+
+  .research-pillars {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-topic {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .research-topic.reverse .research-topic-image,
+  .research-topic.reverse .research-topic-content {
+    order: initial;
+  }
+
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+}
+.person-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.person-card-link .person-card {
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person-card-link:hover .person-card {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   PROFILE PAGE
+================================ */
+
+.profile-page {
+  padding: 100px 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-role {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.profile-content h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.profile-intro {
+  font-size: 19px;
+  color: #555;
+  max-width: 750px;
+  margin-bottom: 25px;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-links a {
+  color: #222;
+  font-weight: 600;
+}
+
+.profile-details {
+  max-width: 900px;
+}
+
+.profile-details section {
+  padding: 35px 0;
+  border-top: 1px solid #ddd;
+}
+
+.profile-details h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.profile-details p {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+@media (max-width: 800px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-photo {
+    max-width: 320px;
+  }
+
+  .profile-content h1 {
+    font-size: 38px;
+  }
+}
+.contact-footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 100px;
+}
+
+.lab-contact-details {
+  display: grid;
+  gap: 28px;
+}
+
+.lab-contact-details span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.lab-contact-details p {
+  font-size: 16px;
+}
+
+.lab-contact-details a {
+  color: #222;
+  text-decoration: none;
+}
+
+.lab-contact-details a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .contact-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+.lab-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-brand .logo {
+  line-height: 1.1;
+}
+
+.lab-brand span {
+  font-size: 12px;
+  color: #777;
+  margin-top: 6px;
+}
